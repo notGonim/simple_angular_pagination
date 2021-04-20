@@ -1,0 +1,27 @@
+<nav>
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
+      <a (click)="currentPage = currentPage - 1" class="page-link"> Prev </a>
+    </li>
+    <ng-container *ngFor="let image of images; let i = index">
+      <li class="page-item" 
+      [ngClass]="{ active: i === currentPage }">
+        <a (click)="currentPage = i" class="page-link">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentPage === images.length - 1 }"
+    >
+      <a (click)="currentPage = currentPage + 1" class="page-link"> next </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="">
+  <h4 appClassme>{{ images[currentPage].title }}</h4>
+  <img
+    [src]="images[currentPage].imgUrl"
+    alt="{{ images[currentPage].title }}"
+  />
+</div>
