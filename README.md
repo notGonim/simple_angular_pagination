@@ -1,6 +1,5 @@
 # angular pagination 
-> this is a simple angular paggination while practicing learnning angular directives
-
+>  this is simple angular pagination while practicing learning angular directives
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
 ## Development server
